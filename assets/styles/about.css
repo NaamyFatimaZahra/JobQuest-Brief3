@@ -102,21 +102,55 @@ ul
         justify-self: center;
     }
     .about p{
-        font-size: 0.75em;
+        font-size: 0.7em;
         justify-self: center;
+    }
+    .stats{
+        font-size: 0.65em;
     }
 }
 
 
 @media(max-width: 1040px)
 {
+    .hero-cart{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .stat-important-text{
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    .stat{
+    border-radius: 10px;
+    background-color: #FFF8ED;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #002746;
+    min-height: 10vh;
+    }
+    .stats h2{
+        flex-basis: 100%;
+        margin: 4px;
+    }
+    .stat-important-text{
+    color:#CE0033;
+    }
     .stats{
-        grid-row: 10 / 15;
+        grid-row: 10 / 16;
         grid-column: 1 / 30;
-        border: solid 2px black;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        text-align: center;
+        justify-content: center;
+        min-height: fit-content;
     }
     .about{
-        background: url("/assets/images/about-cover-4-bis.jpg");
+        background: url("/assets/images/about-cover-4-bis.jpg"),rgba(255, 255, 255, 0.5);
+        background-blend-mode: lighten;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
