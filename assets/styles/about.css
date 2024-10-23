@@ -19,6 +19,7 @@ header {
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    top: 0;
     position: fixed;
     padding: 10px 0;
 }
@@ -169,6 +170,7 @@ ul {
     width: 100%;
     border-radius: 10px;
 }
+
 .note-section {
     display: flex;
     align-items: center;
@@ -178,30 +180,47 @@ ul {
 }
 
 .note {
-    background-color: rgba(173, 216, 230, 0.8); /* لون أبيض يميل إلى الأزرق السماوي */
+    background-color: rgba(173, 216, 230, 0.8);
     padding: 20px;
-    border-radius: 10px; /* لجعل الزوايا دائرية */
-    width: 200px; /* عرض ثابت للـ div الأول */
-    text-align: center; /* توسيط النص */
-    margin: 0 10px; /* إضافة مسافة بين العناصر */
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    margin: 0 10px;
 }
 
 .description {
-    background-color: rgba(173, 216, 230, 0.8); /* لون أبيض يميل إلى الأزرق السماوي */
-    padding: 40px 5px;
-    border-radius: 10px; /* لجعل الزوايا دائرية */
-    flex: 1; /* يجعل العنصر يأخذ أكبر قدر ممكن من العرض المتاح */
-    text-align: left; /* محاذاة النص إلى اليسار */
-    margin: 0 10px; /* إضافة مسافة بين العناصر */
+    background-color: rgba(173, 216, 230, 0.8);
+    padding: 40px 10px;
+    border-radius: 10px;
+    flex: 1;
+    text-align: left;
+    margin: 0 10px;
 }
 
 .divider {
-    width: 1px; /* عرض الخط */
-    background-color: #CE0033; /* لون الخط */
-    height: 80px; /* ارتفاع الخط */
-    margin: 0 20px; /* مسافة حول الخط العمودي */
+    width: 1px;
+    background-color: #CE0033;
+    height: 80px;
+    margin: 0 20px;
 }
 
+.ratings-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.user-rating {
+    background-color: rgba(255, 182, 193, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+}
 
 @media(max-width: 600px) {
     .about h2 {
