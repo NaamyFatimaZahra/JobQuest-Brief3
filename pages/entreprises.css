@@ -15,29 +15,28 @@ body {
 .search h1
 {
     margin-top: 50px;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .search-button
 {
     background-color: white;
     border: #000000;
-    padding: 8px;
     border-radius: 25px;
-    width: 5rem;
+    width: 6rem;
     border: 1px solid black ;
     font-weight: bold;
-    font-size: 13px;
-    height: 2rem;
+    font-size: 18px;
+    height: 36px;
 
 }
 
 .search-bar
 {
-        padding: 12px;
-        width: 40rem;
+        padding: 14px;
+        width: 60rem;
         border: 1px solid #000000;
-        border-radius: 15px; 
+        border-radius: 30px; 
         margin-right: 8px;
         margin-top: 50px;
 }
@@ -47,36 +46,45 @@ body {
     position: relative;
     display: inline-block;
     padding-left: 50px;
+    padding-right: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    
 }
 
-.ent-gallery h1
+.gall-title h1
 {
     text-align: left;
     margin-top: 50px;
+    margin-left: 200px;
     font-size: 30px;   
 }
-.ent-gallery p
+.gall-title p
 {
     margin-top: 20px;
+    margin-left: 200px;
     font-size: 20px;
+    margin-bottom: 80px;
     
 }
 
 .gallery
 {
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
 }
 
 .image-container
 {
     position: relative;
     display: inline-block;
-    width: 250px;
-    height: 300px;
+    width: 350px;
+    height: 200px;
     overflow: hidden;
 }
 
@@ -86,8 +94,8 @@ body {
 {
     display: block;
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: 90%;
+    object-fit: cover;
     border-radius: 15px;
 }
 .center-image
@@ -95,7 +103,7 @@ body {
     width: 80px;
     height: auto;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);  
     border-radius: 5px; 
@@ -104,7 +112,7 @@ body {
 .job-offer 
 {
     position: absolute;
-    top: 92px;
+    top: 10px;
     right: 20px; 
     background-color: #002746; 
     padding: 5px 7px; 
@@ -115,18 +123,37 @@ body {
 
 
 
-/* .ent-gallery 
+.cabinet-title
 {
+    padding-bottom: 20px;
+    text-align: left;
     margin-top: 50px;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    margin-left: 200px;
+    font-size: 22px;   
 }
-.center
+
+.cabinets
 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%)
-} */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 200px;
+    padding-right: 150px;
+
+
+}
+
+.entreprises {
+    display: grid;                            
+    grid-template-columns: repeat(8, 1fr);    
+    gap: 20px;                                 
+    padding-left: 150px;                       
+    padding-right: 80px;                    
+}
+
+.ent-logos {
+    display: flex;                           
+    justify-content: center;                    
+    align-items: center;                        
+    padding-bottom: 20px;
+}
