@@ -18,14 +18,17 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#">home</a></li>
-          <li><a href="#">find job</a></li>
-          <li><a href="#">entreprise</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">contact</a></li>
+          <li><a aria-label="home page" href="index.html">home</a></li>
+          <li><a aria-label="FindJob page" href="pages/FindJob.html">find job</a></li>
+          <li><a aria-label="entreprises page" href="pages/entreprises.html">entreprise</a></li>
+          <li><a aria-label="about page" href="pages/about.html">about</a></li>
+          <li><a aria-label="contact page" href="pages/contact.html">contact</a></li>
         </ul>
-        <button>Log in/Sign in</button>
+        <button><a aria-label="register page" href="pages/register">Log in/Sign in</a></button>
       </nav>
+<button class="menu">
+  <i  class="fa-solid fa-bars menu test"></i>
+</button>
     </header>
     <!--------------------------------------------------- Home --------------------------------------------------->
     <section class="home-section">
@@ -48,11 +51,11 @@
           </div>
           <h2>popular searches :</h2>
           <div class="popular-container">
-            <a href="#" aria-label="popular search">dev</a>
-            <a href="#" aria-label="popular search">designer</a>
-            <a href="#" aria-label="popular search">web</a>
-            <a href="#" aria-label="popular search">fullstack</a>
-            <a href="#" aria-label="popular search">senior</a>
+            <a href="pages/entreprises.html" aria-label="popular search">dev</a>
+            <a href="pages/entreprises.html"  aria-label="popular search">designer</a>
+            <a href="pages/entreprises.html"  aria-label="popular search">web</a>
+            <a href="pages/entreprises.html"  aria-label="popular search">fullstack</a>
+            <a href="pages/entreprises.html"  aria-label="popular search">senior</a>
           </div>
         </div>
       </div>
@@ -62,46 +65,108 @@
       <div class="categories-container">
         <h2>search by category:</h2>
         <p class="paragraph">
-          search your career opportunity with our categories.
+          search your career opportunity with our categories:
         </p>
         <div class="all-categories">
           <div class="category-1">
-            <img src="assets/images/png/goal.png" alt="" />
-            <p>Business Developement</p>
+            <img src="assets/images/png/goal.png" alt="goal image" />
+            <a href="pages/entreprises.html" aria-label="category option" >Business Developement</a>
           </div>
           <div class="category-2">
-            <img src="assets/images/png/light.png" alt="" />
-            <p>customer service</p>
+            <img src="assets/images/png/light.png" alt="light image" />
+            <a href="pages/entreprises.html" aria-label="category option" >customer service</a>
           </div>
           <div class="category-3">
-            <img src="assets/images/png/msessage.png" alt="" />
-            <p>Finance</p>
+            <img src="assets/images/png/message.png" alt="message image" />
+            <a href="pages/entreprises.html" aria-label="category option" >Finance</a>
           </div>
         </div>
       </div>
     </section>
     <!--------------------------------------------------- Featured job offers --------------------------------------------------->
-   <section class="featured-section">
-   <div class="featured-container">
-    <h2>featured job offers:</h2>
-    <p class="paragraph">
-        search your career opportunity through 12.300 jobs.
-    </p>
-    <div class="all-featured">
-      <div class="featured-1">
-        <img src="assets/images/png/goal.png" alt="" />
-        <p>Business Developement</p>
+    <section class="featured-section">
+      <div class="featured-container">
+        <h2>featured job offers:</h2>
+        <p class="paragraph">
+          search your career opportunity through 12.300 jobs.
+        </p>
+        <div class="all-featured">
+          <div class="featured">
+            <div>
+              <img src="assets/images/icons/data-science.png" alt="" />
+            <p>data-science</p>
+            </div>
+            <div>
+              <h3>Financial analyst</h3>
+            <p>full time</p>
+            </div>
+           <div>
+            <p>jun 10 2024</p>
+            <img src="assets/images/icons/facebook.png" alt="" />
+           </div>
+          </div>
+          <div class="featured">
+            <div>
+              <img src="assets/images/icons/code.png" alt="" />
+              <p>data-science</p>
+            </div>
+            <div>
+              <h3>Financial analyst</h3>
+              <p>full time</p>
+            </div>
+            <div>
+              <p>jun 11 2024</p>
+              <img src="assets/images/icons/amazone.png" alt="" />
+            </div>
+          </div>
+          <div class="featured">
+            <div>
+              <img src="assets/images/icons/ux.png" alt="" />
+              <p>data-science</p>
+            </div>
+            <div>
+              <h3>Financial analyst</h3>
+              <p>full time</p>
+            </div>
+            <div>
+              <p>jun 14 2024</p>
+              <img src="assets/images/icons/ebay.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="see-all-featured">
+          <a href="#">see all <span>&#8594;</span></a>
+        </div>
       </div>
-      <div class="featured-2">
-        <img src="assets/images/png/light.png" alt="" />
-        <p>customer service</p>
+    </section>
+    <footer>
+      <div class="footer-about">
+        <img src="assets/images/png/jobQuest-foot.png" alt="">
+        <p>JobQuest connects freelancers with businesses,
+           empowering talent and opportunity across a wide range of services.</p>
       </div>
-      <div class="featured-3">
-        <img src="assets/images/png/msessage.png" alt="" />
-        <p>Finance</p>
+      <div class="footer-office">
+        <h4>office:</h4>
+     <p>we have our office in casablanca
+      Rue Salima N23 </p>
+      <p>JobQuestCompany@gmail.com</p>
+      <p>+321 347932947</p>
       </div>
-    </div>
-   </div>
-   </section>
+      <div class="footer-links">
+        <h4>links:</h4>
+        <ul>
+          <li><a aria-label="home page" href="index.html">home</a></li>
+          <li><a aria-label="FindJob page" href="pages/FindJob.html">find job</a></li>
+          <li><a aria-label="entreprises page" href="pages/entreprises.html">entreprise</a></li>
+          <li><a aria-label="about page" href="pages/about.html">about</a></li>
+          <li><a aria-label="contact page" href="pages/contact.html">contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-copyright">
+        <p>
+          © 2024 jobQuest. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
