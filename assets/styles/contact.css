@@ -1,0 +1,248 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body {
+    background-color: #E6F0F9;
+    display: grid;
+    grid-template-rows: auto; /* استخدام auto لعدم وجود مسافات إضافية */
+    grid-template-columns: repeat(1, 1fr); /* عمود واحد للعرض */
+    align-items: center;
+    justify-content: center; /* التوسيع بشكل مناسب */
+}
+
+/* ====== HEADER ====== */
+header {
+    background: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    padding: 10px 0;
+}
+
+.alllist {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > img {
+    height: 70px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+.li-container {
+    display: flex;
+}
+
+.li-container > li > a {
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
+}
+
+#menu-icon {
+    font-size: 2.4em;
+    cursor: pointer;
+    display: none;
+    margin-right: 25px;
+}
+
+.login-button {
+    background-color: #002746;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+.login-button:hover {
+    transform: scale(1.1);
+}
+
+header + section {
+    margin-top: 80px;
+}
+
+/* ====== CONTACT SECTION ====== */
+#contact {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.contact-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 500px;
+    color: white;
+    padding-left: 20px;
+}
+
+.contact-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#contact h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* لون النص في الفورم */
+#contact label, 
+#contact input, 
+#contact textarea,
+#contact h2, 
+#contact button {
+    color: #002746;
+}
+
+/* لون الزر */
+#contact button {
+    background-color: #002746;
+    color: white;
+    border-radius: 7px;
+}
+
+#contact form {
+    max-width: 100%;
+}
+
+#contact label {
+    display: block;
+    margin-top: 10px;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact button {
+    margin: 20px;
+    padding: 10px 20px;
+}
+
+/* ====== FAQ SECTION ====== */
+.FAQ {
+    grid-row: 2; /* استخدام صف جديد للـ FAQ */
+    grid-column: 1;
+    padding: 20px;
+}
+
+.FAQ h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.faq-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.faq-column {
+    flex: 1;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-item p {
+    margin: 5px 0;
+}
+
+.faq-item .answer {
+    color: #CE0033; /* لون الإجابة */
+}
+
+hr {
+    border: 0.5px solid #ccc;
+}
+
+/* ====== MEDIA QUERIES ====== */
+@media(max-width: 600px) {
+    .alllist {
+        display: none;
+    }
+    .login-button {
+        display: none;
+    }
+    #menu-icon {
+        display: block;
+    }
+    .alllist {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.055);
+        backdrop-filter: blur(10px);
+        height: 55vh;
+        width: 100%;
+        top: 100%;
+        right: -100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+        z-index: 999;
+    }
+    .li-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .login-button {
+        display: block;
+    }
+    .li-container a {
+        display: block;
+        margin: 30px 0;
+    }
+    .alllist.open {
+        right: 0;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .faq-container {
+        flex-direction: column;
+    }
+}
