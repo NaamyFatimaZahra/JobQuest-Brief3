@@ -1,0 +1,159 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    color: black;
+    background-color: #ffffff;
+}
+.search
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.search h1
+{
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+.search-button
+{
+    background-color: white;
+    border: #000000;
+    border-radius: 25px;
+    width: 6rem;
+    border: 1px solid black ;
+    font-weight: bold;
+    font-size: 18px;
+    height: 36px;
+
+}
+
+.search-bar
+{
+        padding: 14px;
+        width: 60rem;
+        border: 1px solid #000000;
+        border-radius: 30px; 
+        margin-right: 8px;
+        margin-top: 50px;
+}
+
+.ent-gallery
+{
+    position: relative;
+    display: inline-block;
+    padding-left: 50px;
+    padding-right: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    
+}
+
+.gall-title h1
+{
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 200px;
+    font-size: 30px;   
+}
+.gall-title p
+{
+    margin-top: 20px;
+    margin-left: 200px;
+    font-size: 20px;
+    margin-bottom: 80px;
+    
+}
+
+.gallery
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.image-container
+{
+    position: relative;
+    display: inline-block;
+    width: 350px;
+    height: 200px;
+    overflow: hidden;
+}
+
+
+
+.main-image
+{
+    display: block;
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.center-image
+{
+    width: 80px;
+    height: auto;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    border-radius: 5px; 
+}    
+
+.job-offer 
+{
+    position: absolute;
+    top: 10px;
+    right: 20px; 
+    background-color: #002746; 
+    padding: 5px 7px; 
+    font-size: 9px; 
+    color: #ffffff; 
+    border-radius: 15px; 
+}
+
+
+
+.cabinet-title
+{
+    padding-bottom: 20px;
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 200px;
+    font-size: 22px;   
+}
+
+.cabinets
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 200px;
+    padding-right: 150px;
+
+
+}
+
+.entreprises {
+    display: grid;                            
+    grid-template-columns: repeat(8, 1fr);    
+    gap: 20px;                                 
+    padding-left: 150px;                       
+    padding-right: 80px;                    
+}
+
+.ent-logos {
+    display: flex;                           
+    justify-content: center;                    
+    align-items: center;                        
+    padding-bottom: 20px;
+}
