@@ -264,7 +264,7 @@ border-top: 1px solid ;
 .footer-links ul,.footer-office{
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: .5rem;
 }
 .footer-office{
   width: 14rem;
