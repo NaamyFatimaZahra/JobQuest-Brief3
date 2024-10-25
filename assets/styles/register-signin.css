@@ -61,6 +61,7 @@ main{
     display: flex;
     justify-content: center;
 align-items: center;
+flex-wrap: wrap;
 gap: 8rem;
 }
   section{
@@ -80,7 +81,7 @@ gap: 8rem;
 .img-container{
     width: 10rem;
 }
-.sign-in-container{
+.sign-in-container,.register-container{
     background-color: #FFF8ED;
     border-top-left-radius: 4rem;
     height: 100%;
@@ -91,7 +92,7 @@ gap: 8rem;
     gap: 2rem;
     justify-content: center;
 }
-.sign-in-container h4{
+section h4{
    text-transform: uppercase;
    font-size:1rem;
 }
@@ -102,7 +103,7 @@ form{
     gap: 1rem;
     text-transform: capitalize;
 }
-.email,.password{
+.email,.password,.first-name,.last-name{
     border: none;
     background-color:#B5B0B0;
     height: 3rem;
@@ -128,6 +129,19 @@ form{
     color: #e6f0f9;
     align-self: center;
   }
+  .register-section .img-container{
+display: none;
+
+  }
+  .register-container{
+    border-radius: 0;
+  }
+  .register-container form{
+   gap: .5rem;
+  }
+  .register-container button{
+    margin-top: 1rem;
+   }
 
   /*--------------------------------------------------- Featured ---------------------------------------------------*/
   footer{
@@ -173,14 +187,14 @@ form{
   /*media queries 640px*/
   @media (max-width: 640px) { 
     /*Header*/
+
     header{
-      
       overflow: hidden;
-      background-color: #e6f0f9;
       justify-content: space-between ;
       padding: 0 2rem;
      
     }
+
     nav{
       display: none;
     }
@@ -191,7 +205,14 @@ form{
       background-color: transparent;
       border: none;
     }
-    
+    section{
+        width: 18rem;
+        min-height: 60vh;
+    }
+    main{
+        height: fit-content;
+        padding: 8rem 0;
+    }
  
       /*footer*/
       footer{
