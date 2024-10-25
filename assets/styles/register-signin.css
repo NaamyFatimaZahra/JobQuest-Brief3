@@ -6,7 +6,7 @@
   }
   
   /*--------------------------------------------------- Header ---------------------------------------------------*/
-  header {
+  /* header {
     position: absolute;
     z-index: 7;
     top: 0;
@@ -52,7 +52,69 @@
   nav button a {
     text-decoration: none;
     color: #e6f0f9;
+  } */
+  header
+  {
+      background: #e6f0f9;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      position: fixed;
+      z-index: 7;
   }
+  
+  .alllist
+  {
+      width: 55%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  
+  
+  header>img
+  {
+      height: 70px;
+  }
+  
+  ul 
+  {
+      list-style: none;
+      display: flex;
+  }
+  
+  .li-container
+  {
+      display: flex;
+  }
+  
+  .li-container>li>a
+  {
+      margin: 20px;
+      text-decoration: none;
+      font-size: 1.2em;
+      color:#002746;
+      text-transform: capitalize;
+  
+  }
+  header button a{
+    text-decoration: none;
+    color: #e6f0f9;
+  
+  }
+  header button {
+   background-color: #002746;
+   border: none;
+   padding: .7rem ; 
+   border-radius: .4rem;
+  }
+  .bx{
+    display: none !important;
+  }
+  
   /*--------------------------------------------------- sign in ---------------------------------------------------*/
 main{
     width: 100%;
@@ -143,7 +205,7 @@ display: none;
     margin-top: 1rem;
    }
 
-  /*--------------------------------------------------- Featured ---------------------------------------------------*/
+  /*--------------------------------------------------- Footer ---------------------------------------------------*/
   footer{
     background-color: #002746;
     padding: 2rem 6rem 0;
@@ -170,6 +232,9 @@ display: none;
     flex-direction: column;
     gap: .5rem;
   }
+  footer img{
+    width: 9rem;
+  }
   .footer-office{
     width: 14rem;
     
@@ -183,28 +248,75 @@ display: none;
   footer h4{
     text-transform: capitalize;
   }
-  
-  /*media queries 640px*/
   @media (max-width: 640px) { 
     /*Header*/
 
-    header{
-      overflow: hidden;
-      justify-content: space-between ;
-      padding: 0 2rem;
-     
-    }
-
-    nav{
+    .alllist {
       display: none;
     }
-    .menu{
+    .bx {
       display: block !important;
       color: #002746;
       font-size: 2.7rem;
       background-color: transparent;
       border: none;
     }
+    section {
+      width: 18rem;
+      min-height: 60vh;
+    }
+    main {
+      height: fit-content;
+      padding: 8rem 0;
+    }
+  
+  
+  .login-button {
+      display: none;
+  }
+  
+  #menu-icon {
+      display: block;
+  }
+  
+  .alllist {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.055);
+      backdrop-filter: blur(10px);
+      height: 55vh;
+      width: 100%;
+      top: 100%;
+      right: -100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: 0.4s;
+      z-index: 999;
+  }
+  
+  .li-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .login-button {
+      display: block;
+  }
+  
+  .li-container a {
+      display: flex;
+      display: block;
+      margin: 30px 0;
+  }
+  
+  .alllist.open {
+      right: 0;
+  }
+     /*main*/
+
     section{
         width: 18rem;
         min-height: 60vh;
