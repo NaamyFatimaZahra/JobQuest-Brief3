@@ -8,13 +8,12 @@
 body {
     background-color: #E6F0F9;
     display: grid;
-    grid-template-rows: auto; /* استخدام auto لعدم وجود مسافات إضافية */
-    grid-template-columns: repeat(1, 1fr); /* عمود واحد للعرض */
+    grid-template-rows: auto;
+    grid-template-columns: repeat(1, 1fr);
     align-items: center;
-    justify-content: center; /* التوسيع بشكل مناسب */
+    justify-content: center;
 }
 
-/* ====== HEADER ====== */
 header {
     background: none;
     display: flex;
@@ -33,7 +32,7 @@ header {
     align-items: center;
 }
 
-header > img {
+header>img {
     height: 70px;
 }
 
@@ -46,7 +45,7 @@ ul {
     display: flex;
 }
 
-.li-container > li > a {
+.li-container>li>a {
     margin: 20px;
     text-decoration: none;
     font-size: 1.2em;
@@ -74,11 +73,10 @@ ul {
     transform: scale(1.1);
 }
 
-header + section {
+header+section {
     margin-top: 80px;
 }
 
-/* ====== CONTACT SECTION ====== */
 #contact {
     grid-row: 1;
     grid-column: 1;
@@ -116,16 +114,14 @@ header + section {
     margin-bottom: 20px;
 }
 
-/* لون النص في الفورم */
-#contact label, 
-#contact input, 
+#contact label,
+#contact input,
 #contact textarea,
-#contact h2, 
+#contact h2,
 #contact button {
     color: #002746;
 }
 
-/* لون الزر */
 #contact button {
     background-color: #002746;
     color: white;
@@ -141,7 +137,8 @@ header + section {
     margin-top: 10px;
 }
 
-#contact input, #contact textarea {
+#contact input,
+#contact textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -154,9 +151,8 @@ header + section {
     padding: 10px 20px;
 }
 
-/* ====== FAQ SECTION ====== */
 .FAQ {
-    grid-row: 2; /* استخدام صف جديد للـ FAQ */
+    grid-row: 2;
     grid-column: 1;
     padding: 20px;
 }
@@ -186,24 +182,96 @@ header + section {
 }
 
 .faq-item .answer {
-    color: #CE0033; /* لون الإجابة */
+    color: #CE0033;
 }
 
 hr {
     border: 0.5px solid #ccc;
 }
 
-/* ====== MEDIA QUERIES ====== */
-@media(max-width: 600px) {
+footer {
+    background-color: #002746;
+    padding: 2rem 6rem 0;
+    display: grid;
+    height: 19rem;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 80% 20%;
+    color: #e6f0f9;
+}
+
+footer img {
+    height: 5rem;
+}
+
+.footer-about {
+    width: 19rem;
+}
+
+.footer-copyright {
+    text-align: center;
+    grid-column: 1/4;
+    border-top: 1px solid;
+}
+
+.footer-copyright p {
+    padding: 1rem 0;
+}
+
+.footer-links ul,
+.footer-office {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-office {
+    width: 14rem;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #e6f0f9;
+}
+
+footer h4 {
+    text-transform: capitalize;
+}
+
+@media (max-width: 640px) {
+    footer {
+        height: fit-content;
+        grid-template-columns: 1fr 0 0 0;
+        padding: 3rem 4rem 0;
+        grid-template-rows: 1fr 1fr 1fr auto;
+    }
+
+    .footer-office {
+        grid-row: 2/3;
+    }
+
+    .footer-links {
+        grid-row: 3/4;
+        padding-bottom: 2rem;
+    }
+
+    .footer-copyright {
+        grid-row: 4/5;
+    }
+}
+
+@media (max-width: 600px) {
     .alllist {
         display: none;
     }
+
     .login-button {
         display: none;
     }
+
     #menu-icon {
         display: block;
     }
+
     .alllist {
         position: absolute;
         background-color: rgba(255, 255, 255, 0.055);
@@ -219,19 +287,23 @@ hr {
         transition: 0.4s;
         z-index: 999;
     }
+
     .li-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
     .login-button {
         display: block;
     }
+
     .li-container a {
         display: block;
         margin: 30px 0;
     }
+
     .alllist.open {
         right: 0;
     }
