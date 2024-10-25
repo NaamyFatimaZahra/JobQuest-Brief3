@@ -109,7 +109,7 @@ ul
         position: absolute;
         background-color: rgba(255, 255, 255, 0.055);
         backdrop-filter: blur(10px);
-        height: 55vh;
+        height: 75vh;
         width: 100%;
         top: 100%;
         right: -100%;
@@ -145,14 +145,10 @@ ul
     .alllist.open
     {
         right: 0;
+        background-color: #002746;
     }
 
 }
-
-
-
-
-
 
 
 body {
@@ -346,41 +342,6 @@ body {
     padding-bottom: 15px;
 }
 
-
-
-.application {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-bottom: 15px;
-}
-
-.card {
-    perspective: 1000px;
-    margin-bottom: 30px; 
-}
-
-.card-inner {
-    position: relative;
-    width: 500px; 
-    height: 90px; 
-    transition: transform 0.6s; 
-    transform-style: preserve-3d;
-    transform-origin: center; 
-}
-
-.card:hover .card-inner {
-    transform: rotateY(180deg); 
-}
-
-.card-front, .card-back {
-    position: absolute;
-    width: 100%; 
-    height: 100%; 
-    backface-visibility: hidden; 
-    border-radius: 15px;
-}
-
 .card-front {
     background-color: #E6F0F9; 
     padding-left: 10px; 
@@ -389,12 +350,14 @@ body {
 }
 
 .card-back {
-    transform: rotateY(180deg); 
+    transform: rotateY(180deg) translateX(200px); 
     background-color: #E6F0F9; 
     padding-left: 10px; 
     font-size: 16px; 
-    font-weight: bold;
+    font-weight: bold; 
 }
+
+
 .application {
     display: flex;
     flex-direction: column;
@@ -429,20 +392,6 @@ body {
     border-radius: 15px; 
 }
 
-.card-front {
-    background-color: #E6F0F9; 
-    padding-left: 10px; 
-    font-size: 16px; 
-    font-weight: bold; 
-}
-
-.card-back {
-    transform: rotateY(180deg) translateX(200px); 
-    background-color: #E6F0F9; 
-    padding-left: 10px; 
-    font-size: 16px; 
-    font-weight: bold; 
-}
 
 @media (max-width: 1929px)
 {
@@ -456,11 +405,11 @@ body {
 @media (max-width: 1492px)
 {
     .image-container
-{
+    {
     width: 290px;
     height: 200px;
     overflow: hidden;
-}
+    }
 .app-process
     {
         margin-left: 150px
@@ -603,18 +552,6 @@ body {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 811px)
 {
     .search-bar {
@@ -666,7 +603,10 @@ body {
         font-size: 30px;
         margin-top: 30px;
     }
-    
+    .formm{
+        display: flex;
+        align-items: end;
+    }
     .page-title
     {
         padding-top: 50px;
@@ -674,7 +614,7 @@ body {
     }
 
     .search-bar {
-        width: 500px;
+        width: 430px;
         padding: 10px;
     }
 
@@ -686,7 +626,7 @@ body {
     .search-button {
         width: 50px;
         font-size: 9px;
-        height: 25px;
+        height: 35px;
     }
 
 
@@ -833,7 +773,7 @@ body {
     }
 
     .search-bar {
-        width: 90%;
+        width: 330px;
         padding: 10px;
     }
 
@@ -845,7 +785,7 @@ body {
     .search-button {
         width: 50px;
         font-size: 9px;
-        height: 25px;
+        height: 35px;
     }
 
 
@@ -906,12 +846,12 @@ body {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
-        padding-left: 50px; 
     }
 
     .cabinets .logos
     {
         padding-bottom: 10px;
+        padding-left: 13px;
     }
 
     .entreprises {
@@ -970,20 +910,53 @@ body {
     }
 }
 
+@media (max-width: 415px) 
+{
+    .search-button
+    {
+        display: none;
+    }
+    .search-bar {
+        width: 278px;
+        padding: 20px;
+        height: 30px;
+    }
+.cabinets 
+    {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-left: 60px;
+    }
+
+
+.cabinets .logos
+    {
+    padding-bottom: 10px;
+    padding-left: 13px;
+    }
+
+}
  @media (max-width: 340px) {
     .search h1 {
-        font-size: 14px;
+        font-size: 18px;
         margin-top: 30px;
+        width: 280px;
+        margin-left: 60px;
     }
     .search
     {
         width: 220px;
     }
 
+    .formm 
+    {
+        margin-left: 130px;
+    }
     .search-bar {
-        width: 60%;
-        padding: 10px;
-        padding-left: 8px;
+        width: 278px;
+        padding: 20px;
+        height: 30px;
     }
 
     .search-button {
@@ -1029,6 +1002,12 @@ body {
         padding-bottom: 25px;
     }
   
+
+    .ent-gallery {
+        padding-left: 120px;
+        column-gap: 20px;
+        width: 200px;
+    }
 
 
 
