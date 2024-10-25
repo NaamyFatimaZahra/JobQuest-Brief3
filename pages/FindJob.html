@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="../assets/styles/findJob.css">
     <link rel="stylesheet"
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
     <title>Document</title>
 </head>
 <body>
@@ -14,18 +17,32 @@
         <img src="../assets/images/imagesPng/logo.png" alt="">
             <ul class="alllist">
                 <div class="li-container">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">FindJob</a></li>
-                    <li><a href="">Entreprise</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="../pages/index.html">Home</a></li>
+                    <li><a href="../pages/FindJob.html">FindJob</a></li>
+                    <li><a href="../pages/entreprises.html">Entreprise</a></li>
+                    <li><a href="../pages/about.html">About</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
                 </div>
-                <button class="login-button">Log/sign</button>
-            </ul>            
+                <button class="login-button"><a href="" class="">Register/sign</a></button>
+            </ul>     
+            
+            <form class="formulair">
+                <div class="fa-solid fa-x" id="out"></div>
+                <div class="formulair-container">
+                    <input type="text" placeholder="Ttile" id="titleUser">
+                    <input type="text" placeholder="Job" id="jobUser">
+                    <input type="text" placeholder="Rule" id="Rule">
+                    <input type="text" placeholder="Time" id="Time">
+                    <button id="addFormulair" type="submit">AddCard</button>
+                </div>
+                <div ></div>
+            </form>
+
+
         <div class="bx bx-menu" id="menu-icon"></div>
     </header>
 
-    <section class="findJob-section">
+    <section class="section-findjob">
         <div class="Title-container">
             <div>
                 <h1 class="top-text-section">Featured Job Offers</h1>
@@ -33,13 +50,58 @@
             </div>
             <div class="search-container">
                 <input type="text" class="input-section">
-                <button class="Button-search">Search</button>
+                <button class="Button-search">addCard</button>
+
             </div>
         </div>
         <div class="cards-container">
 
         </div>
+
     </section>
+    <footer>
+        <div class="footer-about">
+          <img src="../assets/images/png/logo-foot.png" alt="" />
+          <p>
+            JobQuest connects freelancers with businesses, empowering talent and
+            opportunity across a wide range of services.
+          </p>
+        </div>
+        <div class="footer-office">
+          <h4>office:</h4>
+          <p>we have our office in casablanca Rue Salima N23</p>
+          <p>JobQuestCompany@gmail.com</p>
+          <p>+321 347932947</p>
+        </div>
+        <div class="footer-links">
+          <h4>links:</h4>
+          <ul>
+            <li><a aria-label="home page" href="index.html">home</a></li>
+            <li>
+              <a aria-label="FindJob page" href="pages/FindJob.html">find job</a>
+            </li>
+            <li>
+              <a aria-label="entreprises page" href="pages/entreprises.html"
+                >entreprise</a
+              >
+            </li>
+            <li><a aria-label="about page" href="pages/about.html">about</a></li>
+            <li>
+              <a aria-label="contact page" href="pages/contact.html">contact</a>
+            </li>
+            <li>
+              <a
+                aria-label="register and sign in page"
+                href="pages/register-signin.html"
+                >Register/Sign in</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <p>© 2024 jobQuest. All Rights Reserved.</p>
+        </div>
+      </footer>
     <script src="../assets/scripts/scriptjobFind.js"></script>
 </body>
 </html>

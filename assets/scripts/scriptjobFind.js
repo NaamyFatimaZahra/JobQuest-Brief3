@@ -3,6 +3,22 @@ let navlist = document.querySelector('.alllist');
 let section = document.querySelector(".cards-container");
 let input = document.querySelector(".input-section");
 let button = document.querySelector(".Button-search");
+let formulair = document.querySelector(".formulair");
+let buttonout = document.getElementById("out");
+let allSection = document.querySelector(".findJob-section");
+
+
+
+
+let contentFormulair = document.querySelector('.formulair-container');
+
+let InputUserTitle = document.getElementById('titleUser');
+let InputjobUser = document.getElementById('jobUser');
+let InputjobRule = document.getElementById('Rule'); 
+let InputJobTime = document.getElementById('Time'); 
+let addFormulair = document.getElementById("addFormulair");
+
+
 
 
 menu.addEventListener('click',()=>
@@ -11,6 +27,19 @@ menu.addEventListener('click',()=>
     navlist.classList.toggle("open");
 }
 );
+button.addEventListener('click',()=>
+{
+    formulair.classList.toggle("open");
+}
+);
+buttonout.addEventListener("click" , ()=>
+{
+    formulair.classList.toggle("open");
+}
+);
+
+
+
 
 
 
@@ -91,10 +120,10 @@ let cards = [
 ];
 
 
-
 for (let i = 0; i < cards.length; i++) 
     {
-        section.innerHTML += `           
+
+        section.innerHTML = `           
          <div class="card">
                 <div class="headIcone-title">
                     <div class="icon-logo">
@@ -115,11 +144,43 @@ for (let i = 0; i < cards.length; i++)
                     </div>
                 </div>
             </div>` 
+
     }
+
+
+
+    
+for (let i = 0; i < cards.length; i++) 
+    {
+        section.innerHTML += `
+         <div class="card">
+                <div class="headIcone-title">
+                    <div class="icon-logo">
+                        <img src=${cards[i].url} alt="">
+                    </div>
+                    <div class="parent-title"><h2>${cards[i].title}</h2></div>
+                </div>
+                <div class="infoDetail">
+                    <h3 class="jobdetail-text">${cards[i].job}</h3>
+                    <h3 class="job-rule-text">${cards[i].rule}</h3>
+                </div>
+                <div class="time-logo">
+                    <div class="time-post">
+                        <p>${cards[i].time}</p>
+                    </div>
+                    <div class="logo-company-container">
+                        <img src="${cards[i].url_icon}" alt="">
+                    </div>
+                </div>
+            </div>` 
+
+    }
+
 
     input.addEventListener('keyup' , ()=>
     {
-                        section.innerHTML = ''
+ 
+        section.innerHTML = ''
         for (let i = 0; i < cards.length; i++)
         {
             if((cards[i].title).toLowerCase().includes(input.value.toLowerCase()))
@@ -148,5 +209,79 @@ for (let i = 0; i < cards.length; i++)
                    </div>` 
             }
         } 
+
     }
     )
+
+
+
+
+
+
+
+
+
+    // =======================
+
+
+
+
+
+    addFormulair.addEventListener('click', (e) => {
+        if (InputUserTitle.value === '' || InputjobUser.value === '' || InputjobRule.value === '' || InputJobTime.value === '') {
+            contentFormulair.innerHTML = 'Add all Inputs';
+        }
+    
+
+        let objectUser = {
+            title: InputUserTitle.value, 
+            url: "../assets/images/icons/code.png", 
+            job: InputjobUser.value, 
+            rule: InputjobRule.value,
+            time: InputJobTime.value, 
+            url_icon: "../assets/images/icons/amazone.png" 
+        };
+    
+    
+        cards.push(objectUser);
+    
+        e.preventDefault();
+        InputUserTitle.value = '';
+        InputjobUser.value = '';
+        InputjobRule.value = '';
+        InputJobTime.value = '';
+    
+
+        renderCards();
+    });
+    
+
+    function renderCards() {
+        section.innerHTML = ''; 
+        for (let i = 0; i < cards.length; i++) {
+            section.innerHTML += `           
+                <div class="card">
+                    <div class="headIcone-title">
+                        <div class="icon-logo">
+                            <img src="${cards[i].url}" alt="">
+                        </div>
+                        <div class="parent-title"><h2>${cards[i].title}</h2></div>
+                    </div>
+                    <div class="infoDetail">
+                        <h3 class="jobdetail-text">${cards[i].job}</h3>
+                        <h3 class="job-rule-text">${cards[i].rule}</h3>
+                    </div>
+                    <div class="time-logo">
+                        <div class="time-post">
+                            <p>${cards[i].time}</p>
+                        </div>
+                        <div class="logo-company-container">
+                            <img src="${cards[i].url_icon}" alt="">
+                        </div>
+                    </div>
+                </div>`;
+        }
+    }
+    
+
+
