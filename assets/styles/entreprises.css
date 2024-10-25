@@ -42,12 +42,12 @@ ul
     display: flex;
 }
 
-.li-container
+.alllist
 {
     display: flex;
 }
 
-.li-container>li>a
+.alllist>li>a
 {
     margin: 20px;
     text-decoration: none;
@@ -123,7 +123,7 @@ ul
         z-index: 999;
     }
 
-    .li-container
+    .alllist
     {
         display: flex;
         flex-direction: column;
@@ -136,7 +136,7 @@ ul
         display: block;
     }
 
-    .li-container a
+    .alllist a
     {
         display: flex;
         display: block;
