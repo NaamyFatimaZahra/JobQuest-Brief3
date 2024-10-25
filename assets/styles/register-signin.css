@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+  }
+  
+  /*--------------------------------------------------- Header ---------------------------------------------------*/
+  header {
+    position: absolute;
+    z-index: 7;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: transparent;
+  }
+  .logo-container img ,footer img{
+    height: 5rem;
+  }
+  .menu{
+    display: none !important;
+  }
+  nav ul {
+    display: flex;
+    gap: 4rem;
+  }
+  nav ul li ,.footer-links ul li {
+    text-decoration: none;
+    list-style-type: none;
+    text-transform: capitalize;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #002746;
+  }
+  nav {
+    display: flex;
+    gap: 4rem;
+  }
+  
+  nav button {
+    background-color: #002746;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    margin-left: 11rem;
+  }
+  nav button a {
+    text-decoration: none;
+    color: #e6f0f9;
+  }
+  /*--------------------------------------------------- sign in ---------------------------------------------------*/
+main{
+    width: 100%;
+    height: 100vh;
+    background-color: #e6f0f9;
+    display: flex;
+    justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+gap: 8rem;
+}
+  section{
+    height: 70vh;
+    width: 25rem;
+    background-color: #002746;
+    border-radius:1rem ;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   color: #002746;
+}
+.img-container img{
+    width: 10rem;
+}
+.img-container{
+    width: 10rem;
+}
+.sign-in-container,.register-container{
+    background-color: #FFF8ED;
+    border-top-left-radius: 4rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+section h4{
+   text-transform: uppercase;
+   font-size:1rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-transform: capitalize;
+}
+.email,.password,.first-name,.last-name{
+    border: none;
+    background-color:#B5B0B0;
+    height: 3rem;
+    border-radius: .4rem;
+    outline: none;
+    padding-left: 1rem;
+ }
+ .check-forget{
+    font-size: .8rem;
+    display: flex;
+    gap: .4rem;
+ }
+ .check-forget a{
+   padding-left: 1rem;
+   text-decoration: none;
+   color: #002746;
+ }
+ section button {
+    background-color: #002746;
+    border: none;
+    padding: .7rem 1.7rem;
+    border-radius: 1rem;
+    color: #e6f0f9;
+    align-self: center;
+  }
+  .register-section .img-container{
+display: none;
+
+  }
+  .register-container{
+    border-radius: 0;
+  }
+  .register-container form{
+   gap: .5rem;
+  }
+  .register-container button{
+    margin-top: 1rem;
+   }
+
+  /*--------------------------------------------------- Featured ---------------------------------------------------*/
+  footer{
+    background-color: #002746;
+    padding: 2rem 6rem 0;
+      display: grid;
+      height: 19rem;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: 80% 20%;
+      color: #e6f0f9;
+  }
+  
+  .footer-about{
+    width:19rem ;
+  }
+  .footer-copyright{
+    text-align: center;
+  grid-column: 1/4;
+  border-top: 1px solid ;
+  }
+  .footer-copyright p{
+    padding: 1rem 0;
+  }
+  .footer-links ul,.footer-office{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  .footer-office{
+    width: 14rem;
+    
+  
+  }
+  .footer-links ul li  a{
+    text-decoration: none;
+    color: #e6f0f9;
+  
+  }
+  footer h4{
+    text-transform: capitalize;
+  }
+  
+  /*media queries 640px*/
+  @media (max-width: 640px) { 
+    /*Header*/
+
+    header{
+      overflow: hidden;
+      justify-content: space-between ;
+      padding: 0 2rem;
+     
+    }
+
+    nav{
+      display: none;
+    }
+    .menu{
+      display: block !important;
+      color: #002746;
+      font-size: 2.7rem;
+      background-color: transparent;
+      border: none;
+    }
+    section{
+        width: 18rem;
+        min-height: 60vh;
+    }
+    main{
+        height: fit-content;
+        padding: 8rem 0;
+    }
+ 
+      /*footer*/
+      footer{
+        height: fit-content;
+        grid-template-columns: 1fr 0 0 0;
+        padding: 3rem 4rem 0;
+        grid-template-rows: 1fr 1fr 1fr auto;
+    }
+    .footer-office{
+      grid-row: 2/3;
+    }
+    .footer-links{
+      grid-row: 3/4;
+      padding-bottom:  2rem;
+    }
+    .footer-copyright{
+      grid-row: 4/5;
+    }
+  
+   }
+  
+  
+  
+  
+  
