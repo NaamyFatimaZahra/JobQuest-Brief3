@@ -31,7 +31,7 @@ header {
     align-items: center;
 }
 
-header > img {
+header>img {
     height: 70px;
 }
 
@@ -44,7 +44,7 @@ ul {
     display: flex;
 }
 
-.li-container > li > a {
+.li-container>li>a {
     margin: 20px;
     text-decoration: none;
     font-size: 1.2em;
@@ -78,23 +78,23 @@ ul {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
     width: 100%;
     margin-top: 70px;
     margin-bottom: 40px;
 }
 
 .about h2 {
-    text-align: center; 
-    margin-bottom: 10px; 
+    text-align: center;
+    margin-bottom: 10px;
     font-size: 2em;
 }
 
 .about p {
-    text-align: center; 
+    text-align: center;
     margin: 0 10px;
     font-size: 1.5em;
     line-height: 1.5;
@@ -139,7 +139,7 @@ ul {
 
 .hero-card {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     margin-top: 40px;
     width: 100%;
@@ -222,13 +222,91 @@ ul {
     min-width: 150px;
 }
 
+footer {
+    background-color: #002746;
+    padding: 2rem 6rem 0;
+    display: grid;
+    width: 100%;
+    height: 19rem;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 80% 20%;
+    color: #e6f0f9;
+}
+
+footer img {
+    height: 5rem;
+}
+
+.footer-about {
+    width: 19rem;
+}
+
+.footer-copyright {
+    text-align: center;
+    grid-column: 1/4;
+    border-top: 1px solid;
+}
+
+.footer-copyright p {
+    padding: 1rem 0;
+}
+
+.footer-links ul,
+.footer-office {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.footer-office {
+    width: 14rem;
+
+
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #e6f0f9;
+
+}
+
+footer h4 {
+    text-transform: capitalize;
+}
+
+@media (max-width: 640px) {
+
+    footer {
+        height: fit-content;
+        grid-template-columns: 1fr 0 0 0;
+        padding: 3rem 4rem 0;
+        grid-template-rows: 1fr 1fr 1fr auto;
+    }
+
+    .footer-office {
+        grid-row: 2/3;
+    }
+
+    .footer-links {
+        grid-row: 3/4;
+        padding-bottom: 2rem;
+    }
+
+    .footer-copyright {
+        grid-row: 4/5;
+    }
+
+}
+
 @media(max-width: 600px) {
     .about h2 {
         font-size: 1em;
     }
+
     .about p {
         font-size: 0.7em;
     }
+
     .stats {
         font-size: 0.65em;
     }
@@ -260,25 +338,11 @@ ul {
     .card:last-child {
         margin-right: 0;
     }
-}
 
-@media(max-width: 1040px) {
-    .stat-important-text {
-        justify-content: center;
-        margin-bottom: 40px;
-    }
-    .stat {
-        border-radius: 10px;
-        background-color: #FFF8ED;
-        justify-content: center;
-        align-items: center;
-        font-size: 18px;
-        color: #002746;
-        min-height: 10vh;
-    }
     .alllist {
         display: none;
     }
+
     .login-button {
         display: none;
     }
@@ -286,6 +350,7 @@ ul {
     #menu-icon {
         display: block;
     }
+
     .alllist {
         position: absolute;
         background-color: rgba(255, 255, 255, 0.055);
@@ -322,4 +387,71 @@ ul {
     .alllist.open {
         right: 0;
     }
+}
+
+@media(max-width: 1040px) {
+    .stat-important-text {
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .stat {
+        border-radius: 10px;
+        background-color: #FFF8ED;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        color: #002746;
+        min-height: 10vh;
+    }
+
+    .alllist {
+        display: none;
+    }
+
+    .login-button {
+        display: none;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .alllist {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.055);
+        backdrop-filter: blur(10px);
+        height: 55vh;
+        width: 100%;
+        top: 100%;
+        right: -100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+        z-index: 999;
+    }
+
+    .li-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login-button {
+        display: block;
+    }
+
+    .li-container a {
+        display: flex;
+        display: block;
+        margin: 30px 0;
+    }
+
+    .alllist.open {
+        right: 0;
+    }
+
 }
